@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор паролей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dinWindow" id="notice">Вы успешно зарегистрировались. Войдите в аккаунт.</div>
+    <div class="blockView" id="checkBlock">
+        <div class="but" id="viewPass">User</div>
+        <div class="blockTable">
+            <div>Пароли пользователя</div>
+            <div id="resultTable"></div>
+            <div id="loadAllPass">Download</div>
+        </div>
+    </div>
+    <div class="buttons">
+        <div class="but" id="logIn">Log in</div>
+        <div class="but" id="signUp">Sign up</div>
+        <div id="nameUser"></div>
+        <div class="but" id="logOut">Log out</div>
+    </div>
+    <div class="shadowWindow" id="modal">
+        <div class="content" id="formLog">
+            <h1>Login</h1>
+            <div class="but" id="googleAuthLog"><img id="googleIcon" src="google.png"></div>
+            <div>OR</div>
+            <form class="forms" autocomplete="off" id="login">
+                <label class="text" for="login">Nickname</label>
+                <input class="formsText" id="loginLog" type="text" placeholder="name...." required/>
+                <label class="text" for="password">Password</label>
+                <input class="formsText" id="passLog" type="password" minlength="5" maxlength="15" placeholder="password...." required/>
+                <button class="but" id="butLog">Log in</button>
+            </form>
+        </div>
+        <div class="content" id="formReg">
+            <h1>Signup</h1>
+            <form class="forms" autocomplete="off" id="signup">
+                <label class="text" for="login">Nickname</label>
+                <input class="formsText" id="loginSign" type="text" placeholder="name...." required/>
+                <label class="text" for="password">Password</label>
+                <input class="formsText" id="passSign" type="password" minlength="5" maxlength="15" placeholder="password...." required/>
+                <button class="but" id="butReg">Sign up</button>
+            </form>
+        </div>
+    </div>
+    <div class="content" id="start">
+        <div class="bigText">Создать пароль</div>
+        <div class="but" id="nextOne">Приступим!</div>
+    </div>
+    <div class="content" id="chance">
+        <div id="backStart" class="arrowLeft"><span>&#8678;</span></div>
+        <div class="bigText">Выберите запреты</div>
+        <div class="change">
+            <div id="upper" class="butChance">A</div>
+            <div id="lower" class="butChance">a</div>
+            <div id="number" class="butChance">123</div>
+            <div id="punct" class="butChance">./*</div>
+        </div>
+        <div class="but" id="nextTwo">Дальше</div>
+    </div>
+    <div class="content" id="polsunok">
+        <div id="backOne" class="arrowLeft"><span>&#8678;</span></div>
+        <div class="bigText">Размер пароля</div>
+        <div class="littleText" id="sizePassword"></div>
+        <input type="range" min="5" max="32" id="changeSize" value="8">
+        <div class="but" id="nextThree">Дальше</div>
+    </div>
+    <div class="content" id="result">
+        <div id="backTwo" class="arrowLeft"><span>&#8678;</span></div>
+        <div class="bigText">Твой пароль</div>
+        <div class="littleText" id="password"></div>
+        <div class="but" id="replace">Заменить</div>
+        <div class="but" id="save">Сохранить пароль</div>
+    </div>
+    <div class="content" id="saveResult">
+        <div id="backThree" class="arrowLeft"><span>&#8678;</span></div>
+        <div class="bigText">Сохранение результатов</div>
+        <input type="text" name="text" id="nameService" placeholder="Название сервиса....">
+        <div class="but" id="saveInFile">Сохранить в файл</div>
+        <div class="but" id="saveInBase">Сохранить в базе</div>
+    </div>
+    <div class="content" id="updatePass">
+        <div class="littleText">Сохранение успешно</div>
+        <div class="but" id="createAgain">&#10227;</div>
+    </div>
+    <script type="module" src="logicGenerate.js"></script>
+    <script type="module" src="logicMain.js"></script>
+    <script type="module" src="logicDB.js"></script>
+</body>
+</html>

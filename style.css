@@ -1,0 +1,269 @@
+*{
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: fantasy;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    background: white;
+    width: max-content;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px black;
+}
+
+.arrowLeft{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 0px 0px 0px 15px;
+    cursor: pointer;
+}
+
+.bigText{
+    font-size: 60px;
+    margin: 10px;
+}
+
+.littleText{
+    font-size: 30px;
+    margin: 10px;
+}
+
+#changeSize{
+    width: 500px;
+}
+
+.but{
+    background: #FCC002;
+    width: max-content;
+    padding: 15px;
+    font-size: 26px;
+    border-radius: 10px;
+    margin: 20px;
+    outline: auto;
+    cursor: pointer;
+}
+
+.butChance:hover, .but:hover, #loadAllPass:hover{
+    background: #FF5733;
+}
+
+.butChance{
+    background: #0DFC02;
+    width: max-content;
+    padding: 15px;
+    font-size: 26px;
+    border-radius: 10px;
+    margin: 20px;
+    outline: auto;
+    cursor: pointer;
+}
+
+.change{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#chance, #polsunok, #result, #saveResult{
+    display: none;
+}
+
+#nameService{
+    font-size: 30px;
+    padding: 10px;
+    width: 500px;
+}
+
+.active{
+    background: #FC0202;
+}
+
+.blockView{
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.blockTable{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    font-size: 20px;
+    box-shadow: 2px 2px 5px 1px black;
+    border-radius: 5px;
+    background: white;
+    z-index: 10;
+    margin-left: 10px;
+}
+
+#viewPass{
+    margin: 10px 0 10px 10px;
+}
+
+.blockView:hover .blockTable{
+    display: flex;
+}
+
+.lineInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.passService{
+    margin-left: 25px;
+    color: #FF5733;
+}
+
+.logIn{
+    display: flex;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.text{
+    font-size: 22px;
+    margin: 10px;
+}
+
+h1{
+    margin: 15px;
+}
+
+.formsText{
+    width: 300px;
+    height: 50px;
+    font-size: 25px;
+}
+
+#formLog{
+    position: absolute;
+    z-index: 100;
+}
+
+#formReg{
+    position: absolute;
+    z-index: 100;
+}
+
+.shadowWindow{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(117, 190, 218, 0.8);
+    position: absolute;
+    z-index: 99;
+}
+
+.shadow{
+    display: flex;
+}
+
+.dinWindow{
+    display: none;
+    position: absolute;
+    top: -100px;
+    left: 38%;           
+    transform: translate(0, -62%);
+    background: white;
+    width: max-content;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px black;
+}
+
+.action{
+    display: block;
+    animation: 2s linear 1 actionMove;
+}
+
+@keyframes actionMove {
+    0%{
+        top: -100px;
+    }
+    50%{
+        top: 70px;
+    }
+    100%{
+        top: -100px;
+    }
+}
+
+#logOut{
+    display: none;
+}
+
+#updatePass{
+    display: none;
+}
+
+#loadAllPass{
+    background: #FCC002;
+    width: max-content;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    outline: auto;
+    cursor: pointer;
+}
+
+#nameUser{
+    display: none;
+    font-size: 25px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#googleIcon{
+    width: 25px;
+    height: 25px;
+}
